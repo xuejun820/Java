@@ -1,0 +1,32 @@
+package classlibrary;
+
+public class StringBufferDemo1 
+{
+	public static void main(String[] args) {
+		StringBuffer sb=new StringBuffer();
+		sb.append("hello");
+		sb.append(100);
+		sb.append('g');
+		sb.append(sb).append("xuejun");
+		System.out.println(sb);
+		fun(sb);
+		sb.insert(10, "-----");
+		System.out.println(sb);
+		System.out.println(sb.reverse());
+		System.out.println(sb.replace(3, 5, "+++"));
+		System.out.println(sb.indexOf("hg001"));
+		System.out.println(sb.delete(20, 30));
+//		System.out.println(sb.substring(10,20));
+		String str="Hello";
+		int i=0;
+		while(true)
+		{
+			System.out.println(str+i);
+			i++;
+		}
+	}
+	public static void fun(StringBuffer sb)
+	{
+		sb.append("zengjia").append("------");
+	}
+}

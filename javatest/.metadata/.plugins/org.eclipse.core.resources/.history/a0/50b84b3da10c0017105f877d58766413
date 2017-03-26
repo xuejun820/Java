@@ -1,0 +1,42 @@
+package regex;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexDemo1 {
+	public static void main(String[] args) {
+		String str="12345b67890";
+		
+		String str2="1993-08-20";
+		String pet="\\d{4}-\\d{2}-\\d{2}";
+		
+		Pattern p=Pattern.compile(pet);
+		Matcher m=p.matcher(str2);
+		
+		if(m.matches())
+			System.out.println("+");
+		else
+			System.out.println("-");
+		
+		
+		
+		if(Pattern.compile("[0-9]+").matcher(str).matches())
+		{
+			System.out.println("++++++++++");
+		}
+		else
+		{
+			System.out.println("----------");
+		}
+		
+		
+		String str3="A1B3NDDDN449GDLK90DASFJ9D".replaceAll("[0-9+]", "-");
+		String[] temp=str3.split("-");
+//		System.out.println(str3);
+		for(String s:temp)
+			System.out.println(s);
+		
+	}
+
+
+}

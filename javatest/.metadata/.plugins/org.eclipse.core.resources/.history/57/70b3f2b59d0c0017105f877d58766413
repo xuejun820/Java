@@ -1,0 +1,21 @@
+package regex;
+
+import java.util.regex.Pattern;
+
+public class RegexDemo1 {
+	public static void main(String[] args) {
+		String str="12345b67890";
+		
+		if(Pattern.compile("[0-9]+").matcher(str).matches())
+		{
+			System.out.println("++++++++++");
+		}
+		else
+		{
+			System.out.println("----------");
+		}
+		
+	}
+
+
+}

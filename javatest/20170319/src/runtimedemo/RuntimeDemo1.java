@@ -1,0 +1,30 @@
+package runtimedemo;
+
+public class RuntimeDemo1 {
+
+	public static void main(String[] args) {
+		Runtime runtime=Runtime.getRuntime();
+		System.out.println("The Max  Memory: \t"+runtime.maxMemory());
+		System.out.println("The Rest Memory:\t"+runtime.freeMemory());
+		String str="Hello";
+		for(int i=0;i<1000;i++)
+			str+=i;
+		System.out.println("---------------------------------------");
+		System.out.println("The Rest Memory:\t"+runtime.freeMemory());
+		runtime.gc();
+		System.out.println("---------------------------------------");
+		System.out.println("The Rest Memory:\t"+runtime.freeMemory());
+		
+		
+		Process pro=null;
+		try
+		{
+			pro=runtime.exec("notepad.exe");
+		}
+		catch(Exception e){}
+
+		System.getProperties().list(System.out);
+	}
+		
+	
+}

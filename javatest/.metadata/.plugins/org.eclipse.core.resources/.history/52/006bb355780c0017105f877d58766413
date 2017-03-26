@@ -1,0 +1,17 @@
+package datedemo;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class DateDemo1 
+{
+	public static void main(String[] args) {
+		Date date=new Date();
+		System.out.println(date);
+		
+		GregorianCalendar now=new GregorianCalendar();
+		System.out.println(now);
+		
+	}
+}

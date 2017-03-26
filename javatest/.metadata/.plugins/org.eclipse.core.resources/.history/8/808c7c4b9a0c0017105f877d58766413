@@ -1,0 +1,27 @@
+package observe;
+
+import java.util.Observable;
+
+public class ObserveDemo {
+
+}
+
+
+class House extends Observable
+{
+	private float price;
+
+	public House(float price) {
+		super();
+		this.price = price;
+	}
+	
+	
+	
+	public float getPrice()
+	{
+		return price;
+	}
+	
+	
+}

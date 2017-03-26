@@ -1,0 +1,11 @@
+package runtimedemo;
+
+public class RuntimeDemo1 {
+
+	public static void main(String[] args) {
+		Runtime runtime=Runtime.getRuntime();
+		System.out.println("The Max Memory: \t"+runtime.maxMemory());
+		System.out.println("The Rest Memory:\t"+runtime.freeMemory());
+	}
+	
+}
